@@ -16,6 +16,7 @@ The application allows for South African residents to:
   - HomeController.cs
   - IssuesController.cs
  
+
     **Models**
     - Issues.cs
     - IssueNode.cs
@@ -55,3 +56,59 @@ The application allows for South African residents to:
                  - Attachments are stored as file paths.
 
             Push Code to GitHub
+
+           Part 2 with updated implemented features:
+
+  Residents are now able to:
+•	Report issues such as road damages or sanitation problems.
+•	View local events and municipal announcements.
+•	And later on, track the status of their service request that they have submitted.
+
+How to Compile and Run this new and updated Application:
+1.	Open Visual Studio.
+2.	Go to File – Open – Project/Solution.
+3.	Click on the File named: Municipal_Services_Reporting_Application.sIn
+4.	Rebuild the project and then Run the application.
+
+How to use the Application:
+1.	MainMenu
+•	The main menu contains three options:
+•	Report Issues
+•	Local Events and Announcements
+•	Service Request Status
+•	And Exit button to close the application. 
+
+2.	Report Issues
+•	Enter the location of the issues
+•	Select a Category
+•	Provide a detailed description of the issue
+•	Attach any relevant images or documents
+•	Click submit to report the issue
+•	Click back to return to the Main Menu.
+
+3.	Local Events and Announcements
+•	Vie a list of upcoming municipal events.
+•	Use the search bar to find events by keyword or category.
+•	Events are stored using sorted dictionaries for efficient retrieval.
+•	The system provides recommended events based on previous searches.
+
+Data Structures Used:
+-	CustonQueue<T> - Manages the issue submissions.
+-	CustomStack<T> - Tracks recently viewed events.
+-	CustomSet<T> - Stores unique event categories.
+-	EventHashTable – Tracks search frequency for recommendations.
+-	SortedDictionary<DateTime, Lost<EventItem>> - Organizes events by date. 
+
+Project Contents:
+-	MainMenuForm – Application entry point.
+-	ReportIssuesForm – Issue submission form.
+-	LocalEventsForm – Displays events and recommendations.
+-	Models – Folder – Handles button logic and form interactions.
+
+This project was developed as part of my PROG7312 Portfolio of Evidence to demonstrate my understanding of:
+-	Event-driven programming.
+-	Custom data structures.
+-	GUI development using Windows Forms.
+-	Applying algorithms for real-world problem solving in South African Municipalities. 
+
+
