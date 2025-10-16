@@ -111,4 +111,23 @@ This project was developed as part of my PROG7312 Portfolio of Evidence to demon
 -	GUI development using Windows Forms.
 -	Applying algorithms for real-world problem solving in South African Municipalities. 
 
+References
+
+Hart, T.G.B., Chitiga-Mabugu, M.R. and Kibirige, D. (2019) ‘Innovation for development in South Africa: Experiences with basic service technologies in distressed municipalities’, Forum for Development Studies, 47 (1), pp. 23–47. Available at: https://doi.org/10.1080/08039410.2019.1609658
+ (Accessed 20 February 2025).
+
+Microsoft Corporation (2024) .NET Framework developer guide. Available at: https://learn.microsoft.com/en-us/dotnet/framework/
+ (Accessed 16 October 2025).
+
+Microsoft Corporation (2024) Windows Forms documentation. Available at: https://learn.microsoft.com/en-us/dotnet/desktop/winforms/
+ (Accessed 16 October 2025).
+
+OpenAI (2025) ChatGPT (GPT-5) [AI large language model]. San Francisco: OpenAI. Available at: https://chat.openai.com/
+ (Accessed 16 October 2025).
+
+Reynolds, F. (2025) Municipal Services Reporting Application – Part 1 and Part 2 (source code). GitHub repository. Available at: https://github.com/st10314608/Municipal-Services-Reporting-Application
+ (Accessed 16 October 2025).
+
+Stack Overflow Community (2024) Discussions on WinForms event handling and file locking errors. Available at: https://stackoverflow.com/
+ (Accessed 16 October 2025).
 
