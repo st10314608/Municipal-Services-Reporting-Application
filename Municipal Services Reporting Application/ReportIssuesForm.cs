@@ -1,62 +1,35 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace Municipal_Services_Reporting_Application
 {
     public partial class ReportIssuesForm : Form
     {
-        private List<string> attachments = new List<string>();
+        
+        [DllImport("user32.dll", CharSet = CharSet.Unicode)]
+        private static extern IntPtr SendMessage(IntPtr hWnd, int Msg, IntPtr wParam, string lParam);
+
+        private const int EM_SETCUEBANNER = 0x1501; 
 
         public ReportIssuesForm()
         {
             InitializeComponent();
+
+            
+            SetPlaceholder(txtLocation, "Enter the issue location (e.g., street, suburb)");
+
+            
+            new Controllers.ReportIssuesController(this);
         }
 
-        private void btnAttach_Click(object sender, EventArgs e)
+       
+        
+ 
+        private void SetPlaceholder(TextBox tb, string placeholder)
         {
-            OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Multiselect = true;
-            if (ofd.ShowDialog() == DialogResult.OK)
-            {
-                attachments.AddRange(ofd.FileNames);
-                MessageBox.Show("Files attached successfully!");
-            }
-        }
-
-        private void btnSubmit_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(txtLocation.Text) ||
-                cmbCategory.SelectedItem == null ||
-                string.IsNullOrWhiteSpace(rtbDescription.Text))
-            {
-                MessageBox.Show("Please fill in all fields before submitting.");
-                return;
-            }
-
-            Issue newIssue = new Issue
-            {
-                Location = txtLocation.Text,
-                Category = cmbCategory.SelectedItem.ToString(),
-                Description = rtbDescription.Text,
-                Attachments = new List<string>(attachments)
-            };
-
-            IssuesList.Issues.Add(newIssue);
-
-            MessageBox.Show("Issue submitted successfully!");
-            lblEngagement.Text = "Your report helps improve our community. Thank you!";
-        }
-
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            this.Close(); // closes the form and returns to MainMenuForm
+            if (tb == null || string.IsNullOrEmpty(placeholder)) return;
+            SendMessage(tb.Handle, EM_SETCUEBANNER, (IntPtr)1, placeholder);
         }
     }
 }

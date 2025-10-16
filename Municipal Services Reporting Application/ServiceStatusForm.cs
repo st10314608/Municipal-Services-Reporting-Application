@@ -2,13 +2,12 @@
 
 namespace Municipal_Services_Reporting_Application
 {
-    public partial class MainMenuForm : Form
+    public partial class ServiceStatusForm : Form
     {
-        public MainMenuForm()
+        public ServiceStatusForm()
         {
             InitializeComponent();
-            
-            new Controllers.MainMenuController(this);
+            new Controllers.ServiceStatusController(this);
         }
     }
 }

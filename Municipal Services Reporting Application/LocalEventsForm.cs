@@ -2,13 +2,13 @@
 
 namespace Municipal_Services_Reporting_Application
 {
-    public partial class MainMenuForm : Form
+    public partial class LocalEventsForm : Form
     {
-        public MainMenuForm()
+        public LocalEventsForm()
         {
             InitializeComponent();
-            
-            new Controllers.MainMenuController(this);
+            new Controllers.LocalEventsController(this);
         }
     }
 }
+
